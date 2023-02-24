@@ -18,6 +18,9 @@ public class StudentService {
     public void addTeacher(Teacher teacher) {
         studentRepository.addTeacher(teacher);
     }
+    public void addStudentTeacherPair(String student, String teacher) {
+        studentRepository.addStudentTeacherPair(student,teacher);
+    }
 
     public Student getStudentByName(String name) {
         return studentRepository.getStudentByName(name);
@@ -44,7 +47,5 @@ public class StudentService {
         studentRepository.deleteAllTeachers();
     }
 
-    public void addStudentTeacherPair(String student, String teacher) {
-        studentRepository.addStudentTeacherPair(student,teacher);
-    }
+
 }
